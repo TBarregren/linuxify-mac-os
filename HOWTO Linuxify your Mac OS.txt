@@ -51,7 +51,7 @@ cat <<EOT >> /etc/shells
 /usr/local/bin/bash
 EOT
 
-# Becoem yourself again
+# Become yourself again
 exit
 
 # Set Brew's Bash as your default login
