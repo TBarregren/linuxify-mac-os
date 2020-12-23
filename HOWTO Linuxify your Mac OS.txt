@@ -39,9 +39,9 @@ brew install --cask iterm2
 
 # Download .bash_profilem, .bashrc and .bash_aliases to your home directory
 cd $HOME
-wget xxxx
-wget yyyy
-wget zzzz
+wget https://raw.githubusercontent.com/TBarregren/linuxify-mac-os/main/.bash_profile
+wget https://raw.githubusercontent.com/TBarregren/linuxify-mac-os/main/.bashrc
+wget https://raw.githubusercontent.com/TBarregren/linuxify-mac-os/main/.bash_aliases
 
 # Become root
 sudo -s
