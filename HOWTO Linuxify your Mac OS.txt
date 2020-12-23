@@ -1,0 +1,66 @@
+# HOWTO Linuxify your Mac OS
+
+# Start the terminal (press COMMAND + SPACE and start writing Terminal and hit Enter).
+
+# Installera brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install typical GNU/Linux tools
+brew install \
+bash \
+coreutils \
+curl \
+diffutils \
+ed \
+emacs \
+findutils \
+ffmpeg \
+gawk \
+git \
+gnu-getopt \
+gnu-sed \
+gnu-tar \
+gnu-which \
+grep \
+gzip \
+imagemagick \
+jq \
+less \
+lesspipe \
+openssh \
+perl \
+pwgen \
+rsync \
+unzip \
+wget
+
+# Install a better terminal program. Use this inseatd of Apple's.
+brew install --cask iterm2
+
+# Download .bash_profilem, .bashrc and .bash_aliases to your home directory
+cd $HOME
+wget xxxx
+wget yyyy
+wget zzzz
+
+# Become root
+sudo -s
+
+# Lägg till Brew's Bash to the list of allowed shells
+cat <<EOT >> /etc/shells
+/usr/local/bin/bash
+EOT
+
+# Becoem yourself again
+exit
+
+# Set Brew's Bash as your default login
+chsh -s /usr/local/bin/bash $USER
+
+# Exit the terminal
+exit
+
+# Open the iTerm2 app (press COMMAND + SPACE and start writing iTerm.app and hit Enter).
+
+# Check that you have the the Brew version of Bash, that alias works and colors shows
+echo $BASH_VERSION && ll
